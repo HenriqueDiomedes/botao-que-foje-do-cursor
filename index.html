@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Conquista</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="conteudo">
+        <h2>Vai ter cuzinho?</h2>
+        <button class="btn" onclick="abrirModal()">SIM</button>
+        <button class="btn" onmouseover="desviar(this)">NÃO</button>
+    </div>
+
+    <!-- Modal para a nova janela com imagem e botões -->
+    <div id="modal" class="modal">
+        <h1>Escoha uma Posição</h1>
+        <img src="img/posi.jpg" alt="Imagem">
+
+        <div class="num-buttons">
+            <!-- Botões numerados de 1 a 10 -->
+            <button onclick="mostrarPopup()"> 1</button>
+            <button onclick="mostrarPopup()"> 2</button>
+            <button onclick="mostrarPopup()"> 3</button>
+            <button onclick="mostrarPopup()"> 4</button>
+            <button onclick="mostrarPopup()"> 5</button>
+            <button onclick="mostrarPopup()"> 6</button>
+            <button onclick="mostrarPopup()"> 7</button>
+            <button onclick="mostrarPopup()"> 8</button>
+            <button onclick="mostrarPopup()"> 9</button>
+            <button onclick="mostrarPopup()"> 1</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

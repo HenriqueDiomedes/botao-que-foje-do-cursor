@@ -1,0 +1,134 @@
+<!DOCTYPE html>  
+<html lang="pt-br">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Página 2</title>  
+    <style>  
+        body {  
+            display: flex;  
+            flex-wrap: wrap;  
+            justify-content: center;  
+            padding: 20px;  
+            background-color: antiquewhite;  
+        }  
+        .box {  
+            width: calc(30% - 20px); /* Ajustando para 3 colunas com espaçamento */  
+            height: 300px; /* Altura ajustada para melhor estética */  
+            margin: 10px;  
+            border: 2px solid #ccc;  
+            display: flex;  
+            align-items: flex-start; /* Alinhando itens ao topo */  
+            justify-content: center;  
+            position: relative; /* Para permitir o posicionamento absoluto do número */  
+            overflow: hidden;  
+            cursor: pointer; /* Indica que a caixa é clicável */  
+            transition: transform 0.3s; /* Transição suave para o efeito de zoom */  
+        }  
+        .box img {  
+            width: 100%;  
+            height: 100%;  
+            object-fit: cover; /* Mantém as proporções da imagem */  
+            transition: transform 0.3s; /* Transição suave para a imagem */  
+        }  
+        .number {  
+            position: absolute; /* Posiciona o número no canto superior esquerdo */  
+            top: 10px; /* Distância do topo */  
+            left: 10px; /* Distância da esquerda */  
+            background-color: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente para melhor visibilidade */  
+            padding: 5px 10px;  
+            border-radius: 5px;  
+            font-size: 1.5rem; /* Tamanho da fonte */  
+            font-weight: bold;  
+        }  
+        .zoom {  
+            transform: scale(1.5); /* Efeito de zoom */  
+            z-index: 10; /* Coloca a imagem acima das outras */  
+        }  
+        
+        /* Responsividade */  
+        @media (max-width: 768px) {  
+            .box {  
+                width: calc(45% - 20px); /* Para telas menores, ajuste para 2 colunas */  
+            }  
+        }  
+        @media (max-width: 480px) {  
+            .box {  
+                width: calc(100% - 20px); /* Para telas muito pequenas, ajuste para 1 coluna */  
+            }  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="box" onclick="zoomImage(event, this)">  
+        <span class="number">1</span>  
+        <img src="img/1.png" alt="Imagem 1">  
+    </div>  
+    <div class="box" onclick="zoomImage(event, this)">  
+        <span class="number">2</span>  
+        <img src="img/2.png" alt="Imagem 2">  
+    </div>  
+    <div class="box" onclick="zoomImage(event, this)">  
+        <span class="number">3</span>  
+        <img src="img/3.png" alt="Imagem 3">  
+    </div>  
+    <div class="box" onclick="zoomImage(event, this)">  
+        <span class="number">4</span>  
+        <img src="img/4.png" alt="Imagem 4">  
+    </div>  
+    <div class="box" onclick="zoomImage(event, this)">  
+        <span class="number">5</span>  
+        <img src="img/5.png" alt="Imagem 5">  
+    </div>  
+    <div class="box" onclick="zoomImage(event, this)">  
+        <span class="number">6</span>  
+        <img src="img/6.png" alt="Imagem 6">  
+    </div>  
+    <div class="box" onclick="zoomImage(event, this)">  
+        <span class="number">7</span>  
+        <img src="img/7.png" alt="Imagem 7">  
+    </div>  
+    <div class="box" onclick="zoomImage(event, this)">  
+        <span class="number">8</span>  
+        <img src="img/8.png" alt="Imagem 8">  
+    </div>  
+    <div class="box" onclick="zoomImage(event, this)">  
+        <span class="number">9</span>  
+        <img src="img/9.png" alt="Imagem 9">  
+    </div>  
+    <div class="box" onclick="zoomImage(event, this)">  
+        <span class="number">10</span>  
+        <img src="img/10.png" alt="Imagem 10">  
+    </div>  
+
+    <script>  
+        let currentZoomed = null; // Para rastrear qual imagem está em zoom  
+
+        function zoomImage(event, box) {  
+            event.stopPropagation(); // Impede que o evento se propague para o documento  
+
+            // Se a imagem clicada já estiver com zoom, a deszoomamos  
+            if (currentZoomed === box) {  
+                box.classList.remove('zoom');  
+                currentZoomed = null; // Reset  
+            } else {  
+                // Remove o zoom da imagem atualmente em zoom, se houver  
+                if (currentZoomed) {  
+                    currentZoomed.classList.remove('zoom');  
+                }  
+                // Adiciona o zoom à nova imagem clicada  
+                box.classList.add('zoom');  
+                currentZoomed = box; // Atualiza a imagem atual com zoom  
+            }  
+        }  
+
+        // Função para remover o zoom ao clicar fora  
+        document.addEventListener('click', () => {  
+            if (currentZoomed) {  
+                currentZoomed.classList.remove('zoom');  
+                currentZoomed = null; // Reset  
+            }  
+        });  
+    </script>  
+</body>  
+</html>

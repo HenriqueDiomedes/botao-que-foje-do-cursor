@@ -10,6 +10,7 @@ body {
 #conteudo {
     text-align: center;
 }
+
 .btn {
     background-color: purple;
     color: white;
@@ -37,6 +38,12 @@ body {
     width: 600px;
     height: 400px;
     margin-top: 10px;
+}
+.card{
+    background: grey url("img/1.png");
+    width: 300px;
+    height: 300px;
+    align-items: center;
 }
 .num-buttons {
     display: flex;

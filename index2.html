@@ -12,11 +12,23 @@
             padding: 20px;  
             background-color: antiquewhite;  
         }  
+        .container{ 
+            background-color: rgba(131, 240, 240, 0.397);
+            border-radius: 5px;
+            padding: 10px;
+            margin: 2px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            backdrop-filter: bluer(4px);
+            
+        }
         .box {  
-            width: calc(30% - 20px); /* Ajustando para 3 colunas com espaçamento */  
-            height: 300px; /* Altura ajustada para melhor estética */  
+ 
+            height: 400px; /* Altura ajustada para melhor estética */  
             margin: 10px;  
-            border: 2px solid #ccc;  
+            border-radius: 2px solid #ccc;  
             display: flex;  
             align-items: flex-start; /* Alinhando itens ao topo */  
             justify-content: center;  
@@ -26,16 +38,16 @@
             transition: transform 0.3s; /* Transição suave para o efeito de zoom */  
         }  
         .box img {  
-            width: 100%;  
-            height: 100%;  
-            object-fit: cover; /* Mantém as proporções da imagem */  
+            width: 400px;  
+            height: 400px;  
+            object-fit: inherit; /* Mantém as proporções da imagem */  
             transition: transform 0.3s; /* Transição suave para a imagem */  
         }  
         .number {  
             position: absolute; /* Posiciona o número no canto superior esquerdo */  
             top: 10px; /* Distância do topo */  
             left: 10px; /* Distância da esquerda */  
-            background-color: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente para melhor visibilidade */  
+            background-color: rgba(187, 180, 180, 0.7); /* Fundo semi-transparente para melhor visibilidade */  
             padding: 5px 10px;  
             border-radius: 5px;  
             font-size: 1.5rem; /* Tamanho da fonte */  
@@ -43,82 +55,109 @@
         }  
         .zoom {  
             transform: scale(1.5); /* Efeito de zoom */  
-            z-index: 10; /* Coloca a imagem acima das outras */  
+            z-index: 10; /* Coloca a imagem acima das outras */ 
         }  
-
-        .btn{
-            margin: auto;
-            padding: 10px;
+        footer >.p{
+            border: 5px black;
+            width: 100%;
+            padding: -2px;
+            margin: 10px;
+            text-align: center;
         }
-        
-        /* Responsividade */  
-        @media (max-width: 768px) {  
-            .box {  
-                width: calc(45% - 20px); /* Para telas menores, ajuste para 2 colunas */  
-            }  
-        }  
-        @media (max-width: 480px) {  
-            .box {  
-                width: calc(100% - 20px); /* Para telas muito pequenas, ajuste para 1 coluna */  
-            }  
-        }  
+         
     </style>  
 </head>  
 <body>  
-    <div class="box" onclick="zoomImage(event, this)">  
-        <span class="number">1</span>  
-        <img src="img/1.png" alt="Imagem 1">  
-    </div>  
-    <div class="box" onclick="zoomImage(event, this)">  
-        <span class="number">2</span>  
-        <img src="img/2.png" alt="Imagem 2">  
-    </div>  
-    <div class="box" onclick="zoomImage(event, this)">  
-        <span class="number">3</span>  
-        <img src="img/3.png" alt="Imagem 3">  
-    </div>  
-    <div class="box" onclick="zoomImage(event, this)">  
-        <span class="number">4</span>  
-        <img src="img/4.png" alt="Imagem 4">  
-    </div>  
-    <div class="box" onclick="zoomImage(event, this)">  
-        <span class="number">5</span>  
-        <img src="img/5.png" alt="Imagem 5">  
-    </div>  
-    <div class="box" onclick="zoomImage(event, this)">  
-        <span class="number">6</span>  
-        <img src="img/6.png" alt="Imagem 6">  
-    </div>  
-    <div class="box" onclick="zoomImage(event, this)">  
-        <span class="number">7</span>  
-        <img src="img/7.png" alt="Imagem 7">  
-    </div>  
-    <div class="box" onclick="zoomImage(event, this)">  
-        <span class="number">8</span>  
-        <img src="img/8.png" alt="Imagem 8">  
-    </div>  
-    <div class="box" onclick="zoomImage(event, this)">  
-        <span class="number">9</span>  
-        <img src="img/9.png" alt="Imagem 9">  
-    </div>  
-    <div class="box" onclick="zoomImage(event, this)">  
-        <span class="number">10</span>  
-        <img src="img/10.png" alt="Imagem 10">  
-    </div>  
-    <div class="bnt">
-        <button onclick="sendToWhatsApp(1)">Posição 1</button>
-        <button onclick="sendToWhatsApp(2)">Posição 2</button>
-        <button onclick="sendToWhatsApp(3)">Posição 3</button>
-        <button onclick="sendToWhatsApp(4)">Posição 4</button>
-        <button onclick="sendToWhatsApp(5)">Posição 5</button>
-    </div>
-    <div class="btn">
-        <button onclick="sendToWhatsApp(6)">Posição 6</button>
-        <button onclick="sendToWhatsApp(7)">Posição 7</button>
-        <button onclick="sendToWhatsApp(8)">Posição 8</button>
-        <button onclick="sendToWhatsApp(9)">Posição 9</button>
-        <button onclick="sendToWhatsApp(10)">Posição 10</button>
-    </div>
+    <header>
+        <h1>Escolha um tema para o encontro</h1>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">1</span>
+                    <img src="img/01.jpg" alt="Imagem 1">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">2</span>
+                    <img src="img/02.jpg" alt="Imagem 2">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">3</span>
+                    <img src="img/03.jpg" alt="Imagem 3">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">4</span>
+                    <img src="img/04.jpg" alt="Imagem 4">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">5</span>
+                    <img src="img/05.jpg" alt="Imagem 5">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">6</span>
+                    <img src="img/06.jpg" alt="Imagem 6">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">7</span>
+                    <img src="img/07.jpg" alt="Imagem 7">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">8</span>
+                    <img src="img/08.jpg" alt="Imagem 8">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">9</span>
+                    <img src="img/09.jpg" alt="Imagem 9">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">10</span>
+                    <img src="img/10.jpg" alt="Imagem 10">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">15</span>
+                    <img src="img/15.jpg" alt="Imagem 15">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">12</span>
+                    <img src="img/12.jpg" alt="Imagem 12">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">13</span>
+                    <img src="img/13.jpg" alt="Imagem 13">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">14</span>
+                    <img src="img/14.jpg" alt="Imagem 14">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">11</span>
+                    <img src="img/11.jpg" alt="Imagem 11">
+                </div>
+                <div class="box" onclick="zoomImage(event, this)">
+                    <span class="number">16</span>
+                    <img src="img/16.jpg" alt="Imagem 16">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="bnt">
+                <button onclick="sendToWhatsApp(1)">Posição 1</button>
+                <button onclick="sendToWhatsApp(2)">Posição 2</button>
+                <button onclick="sendToWhatsApp(3)">Posição 3</button>
+                <button onclick="sendToWhatsApp(4)">Posição 4</button>
+                <button onclick="sendToWhatsApp(5)">Posição 5</button>
+                <button onclick="sendToWhatsApp(6)">Posição 6</button>
+                <button onclick="sendToWhatsApp(7)">Posição 7</button>
+                <button onclick="sendToWhatsApp(8)">Posição 8</button>
+                <button onclick="sendToWhatsApp(9)">Posição 9</button>
+                <button onclick="sendToWhatsApp(10)">Posição 10</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Criado por Henrique Diomedes</p>
+    </footer>
 
 
     <script>  

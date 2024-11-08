@@ -1,82 +1,93 @@
-body {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
-
-.conteudo {
-    text-align: center;
-}
-
-.botton {
-    background-color: purple;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 5px;
-}
-
-.container{ 
-    background-color: rgba(131, 240, 240, 0.397);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 2px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    backdrop-filter: bluer(4px);
-    
-}
-.box {  
-
-    height: 400px; /* Altura ajustada para melhor estética */  
-    margin: 10px;  
-    border-radius: 2px solid #ccc;  
+body {  
+    background-image: url('img/fundo.jpg');  
+    background-attachment: fixed; /* Adicione essa linha */  
+    background-size: cover; /* Adicione essa linha para que a imagem cubra toda a tela */  
+    background-position: center;
     display: flex;  
-    align-items: flex-start; /* Alinhando itens ao topo */  
     justify-content: center;  
-    position: relative; /* Para permitir o posicionamento absoluto do número */  
-    overflow: hidden;  
-    cursor: pointer; /* Indica que a caixa é clicável */  
-    transition: transform 0.3s; /* Transição suave para o efeito de zoom */  
+    align-items: center;  
+    height: 100vh;  
+    margin: 0;  
+    font-family: Arial, sans-serif;  
+    background-color: #f0f0f0;  
+} 
+
+h1, h2 {  
+    color: white;
+    text-align: center;  
+    padding: 20px;  
 }  
+
+.conteudo {  
+    text-align: center;  
+}  
+
+.botton {  
+    background-color: purple;   
+    border: none;  
+    padding: 10px 20px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    font-size: 16px;  
+    margin: 5px;  
+}  
+
+.container {  
+    border-radius: 5px;  
+    padding: 10px;  
+    margin: 2px;  
+    display: flex;  
+    justify-content: center;  
+    flex-wrap: wrap;  
+    align-items: center;  
+    backdrop-filter: blur(7px);  
+}  
+
+.box {  
+    height: 400px;  
+    margin: 10px;  
+    border-radius: 2px;  
+    display: flex;  
+    align-items: flex-start;  
+    justify-content: center;  
+    position: relative;  
+    overflow: hidden;  
+    cursor: pointer;  
+    transition: transform 0.3s;  
+}  
+
 .box img {  
     width: 400px;  
     height: 400px;  
-    object-fit: inherit; /* Mantém as proporções da imagem */  
-    transition: transform 0.3s; /* Transição suave para a imagem */  
+    object-fit: cover;  
+    transition: transform 0.3s;  
 }  
+
 .number {  
-    position: absolute; /* Posiciona o número no canto superior esquerdo */  
-    top: 10px; /* Distância do topo */  
-    left: 10px; /* Distância da esquerda */  
-    background-color: rgba(187, 180, 180, 0.7); /* Fundo semi-transparente para melhor visibilidade */  
+    position: absolute;  
+    top: 10px;  
+    left: 10px;  
+    background-color: rgba(187, 180, 180, 0.7);  
     padding: 5px 10px;  
     border-radius: 5px;  
-    font-size: 1.5rem; /* Tamanho da fonte */  
+    font-size: 1.5rem;  
     font-weight: bold;  
 }  
+
 .zoom {  
-    transform: scale(1.5); /* Efeito de zoom */  
-    z-index: 10; /* Coloca a imagem acima das outras */ 
+    transform: scale(1.5);  
+    z-index: 10;  
 }  
-footer{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: black;
-    color: white;
-    width: 100%;
-    margin: 5px;
-    text-align: center;
-}
-footer > .p{
-    padding: 10px;
+
+footer {  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    background-color: black;  
+    color: white;  
+    margin: 5px;  
+    text-align: center;  
+}  
+
+footer > .p {  
+    padding: 10px;  
+    margin: 5px;  
 }

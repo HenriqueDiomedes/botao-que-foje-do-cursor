@@ -1,4 +1,5 @@
 body {
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +8,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
 }
-
 
 .conteudo {
     text-align: center;
@@ -22,4 +22,61 @@ body {
     cursor: pointer;
     font-size: 16px;
     margin: 5px;
+}
+
+.container{ 
+    background-color: rgba(131, 240, 240, 0.397);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    backdrop-filter: bluer(4px);
+    
+}
+.box {  
+
+    height: 400px; /* Altura ajustada para melhor estética */  
+    margin: 10px;  
+    border-radius: 2px solid #ccc;  
+    display: flex;  
+    align-items: flex-start; /* Alinhando itens ao topo */  
+    justify-content: center;  
+    position: relative; /* Para permitir o posicionamento absoluto do número */  
+    overflow: hidden;  
+    cursor: pointer; /* Indica que a caixa é clicável */  
+    transition: transform 0.3s; /* Transição suave para o efeito de zoom */  
+}  
+.box img {  
+    width: 400px;  
+    height: 400px;  
+    object-fit: inherit; /* Mantém as proporções da imagem */  
+    transition: transform 0.3s; /* Transição suave para a imagem */  
+}  
+.number {  
+    position: absolute; /* Posiciona o número no canto superior esquerdo */  
+    top: 10px; /* Distância do topo */  
+    left: 10px; /* Distância da esquerda */  
+    background-color: rgba(187, 180, 180, 0.7); /* Fundo semi-transparente para melhor visibilidade */  
+    padding: 5px 10px;  
+    border-radius: 5px;  
+    font-size: 1.5rem; /* Tamanho da fonte */  
+    font-weight: bold;  
+}  
+.zoom {  
+    transform: scale(1.5); /* Efeito de zoom */  
+    z-index: 10; /* Coloca a imagem acima das outras */ 
+}  
+footer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+}
+footer > .p{
+    padding: 10px;
 }

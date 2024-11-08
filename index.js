@@ -39,7 +39,7 @@ let currentZoomed = null; // Para rastrear qual imagem está em zoom
             const recipientNumber = "+559181121979"; // substitua pelo número do destinatário  
             
             // Define o texto da mensagem  
-            const message = encodeURIComponent(`Olá, você escolheu a opção de número 01, as 8h da maha estarei a sua espera${text}`);  
+            const message = encodeURIComponent(`Olá, você escolheu a opção de número 01, as 8h da maha estarei a sua espera, ${text}`);  
             
             // Constrói o link do WhatsApp com o número do destinatário e a mensagem  
             const whatsappUrl = `https://wa.me/${recipientNumber}?text=${message}`;  

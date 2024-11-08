@@ -34,14 +34,20 @@ let currentZoomed = null; // Para rastrear qual imagem está em zoom
             }  
         }  
 
-        function sendToWhatsApp(number) {
-            // Link com a imagem correspondente
-            const message = `Veja a imagem ${number}: https://example.com/img/${number}.png`;
-            const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+        function sendToWhatsApp(number, text) {  
+            // Define o número do destinatário  
+            const recipientNumber = "+559181121979"; // substitua pelo número do destinatário  
             
-            // Abre o link no WhatsApp
-            window.open(whatsappUrl, '_blank');
-        }
+            // Define o texto da mensagem  
+            const message = encodeURIComponent(`Olá, ${text}`);  
+            
+            // Constrói o link do WhatsApp com o número do destinatário e a mensagem  
+            const whatsappUrl = `https://wa.me/${recipientNumber}?text=${message}`;  
+            
+            // Abre o link no WhatsApp  
+            window.open(whatsappUrl, '_blank');  
+          }
+
         // Função para remover o zoom ao clicar fora  
         document.addEventListener('click', () => {  
             if (currentZoomed) {  

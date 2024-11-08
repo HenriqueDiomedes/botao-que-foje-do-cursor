@@ -48,14 +48,14 @@ function abrirNaMesmaJanela() {
   ];  
   
   // Função para enviar mensagem no WhatsApp  
-  function sendToWhatsApp(index) {  
-    console.log("Índice do botão:", index);  
-    console.log("Mensagem:", buttonMessages[index]);  
+  function sendToWhatsApp(botaoIndex) {  
+    console.log("Índice do botão:", botaoIndex);  
+    console.log("Mensagem:", buttonMessages[botaoIndex]);  
     const recipientNumber = "+559181121979";  
-    const message = encodeURIComponent(`Olá, ${buttonMessages[index]}, as 8h da maha estarei a sua espera`);  
+    const message = encodeURIComponent(`Olá, ${buttonMessages[botaoIndex]}, as 8h da maha estarei a sua espera`);  
     const whatsappUrl = `https://wa.me/${recipientNumber}?text=${message}`;  
     window.open(whatsappUrl, '_blank');  
-  } 
+  }
   
   // Função para remover o zoom ao clicar fora  
   document.addEventListener('click', () => {  

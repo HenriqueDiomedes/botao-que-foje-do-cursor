@@ -33,7 +33,8 @@ function abrirNaMesmaJanela() {
   }  
   
   // Array de mensagens para os botões  
-  const buttonMessages = [  
+  const buttonMessages = [
+    "Eu escolho a opção de número 0",   
     "Eu escolho a opção de número 1",  
     "Eu escolho a opção de número 2",  
     "Eu escolho a opção de número 3",  

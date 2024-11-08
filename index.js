@@ -1,10 +1,10 @@
+// Função para redirecionar para outra página  
 function abrirNaMesmaJanela() {  
-    // Redireciona para a nova página (index2.html) na mesma aba  
     window.location.href = 'index2.html';  
-}  
-
-function desviar(btn) {  
-    // Faz o botão "NÃO" desviar do cursor  
+  }  
+  
+  // Função para fazer o botão "NÃO" desviar do cursor  
+  function desviar(btn) {  
     var larguraJanela = window.innerWidth;  
     var alturaJanela = window.innerHeight;  
     var novaPosicaoTop = Math.random() * (alturaJanela - btn.clientHeight);  
@@ -12,46 +12,52 @@ function desviar(btn) {
     btn.style.position = "absolute";  
     btn.style.top = novaPosicaoTop + "px";  
     btn.style.left = novaPosicaoLeft + "px";  
-}
-
-let currentZoomed = null; // Para rastrear qual imagem está em zoom  
-
-        function zoomImage(event, box) {  
-            event.stopPropagation(); // Impede que o evento se propague para o documento  
-
-            // Se a imagem clicada já estiver com zoom, a deszoomamos  
-            if (currentZoomed === box) {  
-                box.classList.remove('zoom');  
-                currentZoomed = null; // Reset  
-            } else {  
-                // Remove o zoom da imagem atualmente em zoom, se houver  
-                if (currentZoomed) {  
-                    currentZoomed.classList.remove('zoom');  
-                }  
-                // Adiciona o zoom à nova imagem clicada  
-                box.classList.add('zoom');  
-                currentZoomed = box; // Atualiza a imagem atual com zoom  
-            }  
-        }  
-
-        function sendToWhatsApp(number, text) {  
-            // Define o número do destinatário  
-            const recipientNumber = "+559181121979"; // substitua pelo número do destinatário  
-            
-            // Define o texto da mensagem  
-            const message = encodeURIComponent(`Olá, você escolheu a opção de número 01, as 8h da maha estarei a sua espera, ${text}`);  
-            
-            // Constrói o link do WhatsApp com o número do destinatário e a mensagem  
-            const whatsappUrl = `https://wa.me/${recipientNumber}?text=${message}`;  
-            
-            // Abre o link no WhatsApp  
-            window.open(whatsappUrl, '_blank');  
-          }
-
-        // Função para remover o zoom ao clicar fora  
-        document.addEventListener('click', () => {  
-            if (currentZoomed) {  
-                currentZoomed.classList.remove('zoom');  
-                currentZoomed = null; // Reset  
-            }  
-        });
+  }  
+  
+  // Variável para rastrear qual imagem está em zoom  
+  let currentZoomed = null;  
+  
+  // Função para zoomar imagem  
+  function zoomImage(event, box) {  
+    event.stopPropagation();  
+    if (currentZoomed === box) {  
+      box.classList.remove('zoom');  
+      currentZoomed = null;  
+    } else {  
+      if (currentZoomed) {  
+        currentZoomed.classList.remove('zoom');  
+      }  
+      box.classList.add('zoom');  
+      currentZoomed = box;  
+    }  
+  }  
+  
+  // Array de mensagens para os botões  
+  const buttonMessages = [  
+    "Eu escolho a opção de número 01",  
+    "Eu escolho a opção de número 02",  
+    "Eu escolho a opção de número 03",  
+    "Eu escolho a opção de número 04",  
+    "Eu escolho a opção de número 05",  
+    "Eu escolho a opção de número 06",  
+    "Eu escolho a opção de número 07",  
+    "Eu escolho a opção de número 08",  
+    "Eu escolho a opção de número 09",  
+    "Eu escolho a opção de número 10",  
+  ];  
+  
+  // Função para enviar mensagem no WhatsApp  
+  function sendToWhatsApp(index) {  
+    const recipientNumber = "+559181121979";  
+    const message = encodeURIComponent(`Olá, ${buttonMessages[index]}, à que horas você vem me buscar`);  
+    const whatsappUrl = `https://wa.me/${recipientNumber}?text=${message}`;  
+    window.open(whatsappUrl, '_blank');  
+  }  
+  
+  // Função para remover o zoom ao clicar fora  
+  document.addEventListener('click', () => {  
+    if (currentZoomed) {  
+      currentZoomed.classList.remove('zoom');  
+      currentZoomed = null;  
+    }  
+  });

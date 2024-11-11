@@ -64,3 +64,14 @@ function sendToWhatsApp(botaoIndex) {
     const whatsappUrl = `https://wa.me/${recipientNumber}?text=${message}`;  
     window.open(whatsappUrl, '_blank');  
 }
+// Função para flipar e zoomar carta  
+function flipAndZoom(event, card) {  
+  card.classList.add('flip');  
+  card.classList.add('zoom');  
+}  
+
+// Função para resetar flip e zoom da carta  
+function resetFlipAndZoom(event, card) {  
+  card.classList.remove('flip');  
+  card.classList.remove('zoom');  
+}

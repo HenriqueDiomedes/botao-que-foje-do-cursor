@@ -20,28 +20,24 @@
     <header>
         <h1>Escolha um tema para o encontro</h1>
     </header>
-    <div class="caixa">
-        <div class="card" onmouseover="flipAndZoom(event, this)" onmouseout="resetFlipAndZoom(event, this)">
-            <div class="card-atras">
-                <div class="card-frente">
-                    <img src="img/i3.jpg" alt="">
-                </div>
-                <div class="card-texto">
-                    <h2>titulo</h2>
-                    <p>Lorem ipsum dolor sit</p>
-                </div>
-            </div>
-        </div>
-    </div>
     <main>
         
         <section>
             <div class="container">
-               
+
                 <div class="box" onclick="zoomImage(event, this)">
-                    <span class="number">1</span>
-                    <img src="img/i1.jpg" alt="Imagem 1">
+                    <div class="box-atras">
+                        <div class="box-frente">
+                            <span class="number">1</span>
+                            <img src="img/i1.jpg" alt="Imagem 1">
+                        </div>
+                        <div class="box-texto">
+                            <p>Lorem, ipsum dolor sit amet consectetur</p>
+                            <button onclick="sendToWhatsApp(1)">Opção 1</button>                            
+                        </div>
+                    </div>
                 </div>
+
                 <div class="box" onclick="zoomImage(event, this)">
                     <span class="number">2</span>
                     <img src="img/i2.jpg" alt="Imagem 2">
@@ -82,7 +78,7 @@
         </section>
         <section>
             <div class="bnt">
-                <button onclick="sendToWhatsApp(1)">Opção 1</button>
+                
                 <button onclick="sendToWhatsApp(2)">Opção 2</button>
                 <button onclick="sendToWhatsApp(3)">Opção 3</button>
                 <button onclick="sendToWhatsApp(4)">Opção 4</button>

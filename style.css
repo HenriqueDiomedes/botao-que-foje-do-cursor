@@ -110,13 +110,13 @@ footer > .p {
     gap: 20px;
 }
 
-.card{
-    width: 150px;
-    height: 300px;
+.box{
+    width: 400px;
+    height: 400px;
     perspective: 1000px;
 }
 
-.card-atras{
+.box-atras{
     width: 100%;
     height: 100%;
     position: relative;
@@ -124,11 +124,11 @@ footer > .p {
     transition: transform 0.8s;
 }
 
-.card:hover .card-atras{
+.box:hover .box-atras{
     transform: rotateY(180deg);
 }
 
-.card-frente, .card-texto{
+.box-frente, .box-texto{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -137,17 +137,17 @@ footer > .p {
     overflow: hidden;
 }
 
-.card-frente{
+.box-frente{
     background-color: white;
 }
 
-.card-frente img{
+.box-frente img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.card-texto{
+.box-texto{
     background-color: black;
     color: white;
     display: flex;
@@ -159,9 +159,9 @@ footer > .p {
     text-align: center;
 }
 
-.card-texto h2{
+.box-texto h2{
     margin-bottom: 10px;
 }
-.card-texto p{
+.box-texto p{
     font-size: 14px;
 }

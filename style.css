@@ -164,4 +164,6 @@ footer > .p {
 }
 .box-texto p{
     font-size: 14px;
+    text-wrap: wrap;
 }
+

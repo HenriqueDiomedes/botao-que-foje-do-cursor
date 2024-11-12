@@ -45,7 +45,7 @@ h2 {
     text-shadow: 0 7px 20px #ff0057;;
 }  
 
-.botton {  
+.botton1 {  
     background-color: #ff0057;   
     color: white;
     border: none;  
@@ -56,7 +56,18 @@ h2 {
     margin: 5px;  
 }  
 
-.botton:hover {
+.botton2{
+    background-color: #ff0057;   
+    color: white;
+    border: none;  
+    padding: 10px 20px;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    font-size: 16px;  
+    margin: 5px;
+}
+
+.botton1:hover {
     background-color: #ff0057; /* Cor mais escura ao passar o mouse */
     color: black;
     box-shadow: 0 7px 20px #ff0057;

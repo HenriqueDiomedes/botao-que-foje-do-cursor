@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: "--fonte1";
+    src: url(font/Valentine\ Cute.ttf);
+}
+
+@font-face {
+    font-family: "--fonte2";
+    src: url(font/KINKEE__.TTF);
+}
+
+
 /*style do index1*/
 body {  
     background-image: url(img/fundo.jpg);
@@ -17,19 +28,25 @@ body {
     font-family: Arial, sans-serif;  
 }
 
-h1, h2 {  
+h2 {  
+    font-family:"--fonte2";
+    font-size: 70px;
     color: white;
     text-align: center;  
-    padding: 20px;  
-    text-shadow: 1px 1px 8px black;
+    padding: 10px;  
+    text-shadow: 1px 1px 8px rgb(238, 7, 7);
 }  
 
-.principal {  
+.principal, h1{  
+    font-family: "--fonte1";
     text-align: center;  
+    color: white;
+    font-size: 30px;
+    text-shadow: 0 7px 20px #ff0057;;
 }  
 
 .botton {  
-    background-color: purple;   
+    background-color: #ff0057;   
     color: white;
     border: none;  
     padding: 10px 20px;  
@@ -37,8 +54,19 @@ h1, h2 {
     cursor: pointer;  
     font-size: 16px;  
     margin: 5px;  
-    box-shadow: 1px 1px 8px #ff0057;
 }  
+
+.botton:hover {
+    background-color: #ff0057; /* Cor mais escura ao passar o mouse */
+    color: black;
+    box-shadow: 0 7px 20px #ff0057;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow:  1px 1px 8px black;
+    letter-spacing: 4px;
+    transition: 0.5s;
+}
 
 /*style do index2*/
 

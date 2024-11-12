@@ -37,15 +37,15 @@ h1, h2 {
     cursor: pointer;  
     font-size: 16px;  
     margin: 5px;  
-    box-shadow: 1px 1px 8px black;
+    box-shadow: 1px 1px 8px #ff0057;
 }  
 
 /*style do index2*/
 
 .container {  
     border-radius: 5px;  
-    padding: 10px;  
-    margin: 2px;  
+    padding: 30px;  
+    margin: 10px;  
     display: flex;
     justify-content: center;  
     flex-wrap: wrap;  
@@ -88,7 +88,7 @@ h1, h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #8d8b8b8a;
+    background: #8d8b8b27;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Alinha o conteúdo ao fundo */
@@ -112,7 +112,7 @@ h1, h2 {
     margin: 10px;
     padding: 10px;
     background-color: #ff0057;
-    color: white;
+    color: black;
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
@@ -121,17 +121,16 @@ h1, h2 {
 
 .caixa .card .face2 button:hover {
     background-color: #ff0057; /* Cor mais escura ao passar o mouse */
-    color: #000000;
-    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.8);
+    color: white;
+    box-shadow: 0 7px 20px #ff0057;
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 4px;
     transition: 0.5s;
-
+}
 /*rodapé*/
-footer {  
-    
+footer { 
     font-family: Verdana, Geneva, Tahoma, sans-serif;  
     background-color: #333; 
     width: 100%; 
@@ -142,5 +141,4 @@ footer {
 
 footer, a{
     color: white;
-}
 }

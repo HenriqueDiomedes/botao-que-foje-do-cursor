@@ -14,48 +14,11 @@ function desviar(btn) {
   btn.style.left = novaPosicaoLeft + "px";  
 }  
 
-// Variável para rastrear qual imagem está em zoom  
-let currentZoomed = null;  
-
-// Função para zoomar imagem  
-function zoomImage(event, box) {  
-  event.stopPropagation();  
-  if (currentZoomed === box) {  
-    box.classList.remove('zoom');  
-    currentZoomed = null;  
-  } else {  
-    if (currentZoomed) {  
-      currentZoomed.classList.remove('zoom');  
-    }  
-    box.classList.add('zoom');  
-    currentZoomed = box;  
-  }  
-}
-
-function flipImage(element) {  
-  element.classList.toggle('box-flip');  
-}
-
-// Array de mensagens para os botões  
-const buttonMessages = [  
-  "Eu escolho a opção de número 0",  
-  "Eu escolho a opção de número 1",  
-  "Eu escolho a opção de número 2",  
-  "Eu escolho a opção de número 3",  
-  "Eu escolho a opção de número 4",  
-  "Eu escolho a opção de número 5",  
-  "Eu escolho a opção de número 6",  
-  "Eu escolho a opção de número 7",  
-  "Eu escolho a opção de número 8",  
-  "Eu escolho a opção de número 9",  
-  "Eu escolho a opção de número 10",  
-];  
-
 // Função para enviar mensagem no WhatsApp  
 function sendToWhatsApp(botaoIndex) {  
   console.log("Índice do botão:", botaoIndex);  
   console.log("Mensagem:", buttonMessages[botaoIndex]);  
-  const recipientNumber = "+559181121979";  
+  const recipientNumber = "";  
   const message = encodeURIComponent(`Olá, ${buttonMessages[botaoIndex]}, que horas você vem me pegar?`);  
   const whatsappUrl = `https://wa.me/${recipientNumber}?text=${message}`;  
   window.open(whatsappUrl, '_blank');  

@@ -64,20 +64,21 @@ h1, h2 {
 }
 
 .caixa .card .face1 {
+    border-radius: 10px;
     position: relative;
-    z-index: 10;
+    z-index: 20;
     transition: 0.9s;
 }
 
 .caixa .card:hover .face1 {
-    background: #ff005580;
-    transform: translateY(-5px);
+    background: #ff0055b9;
+    transform: translateY(-3px);
 }
 
 .caixa .card .face1 .icon img {
-    border-radius: 10px;
-    width: 400px; /* Define a largura desejada para a imagem */
-    height: 400px; /* Define a altura desejada para a imagem */
+    border-radius: 10px;/*tamanho das bosdas "tem que colocar o mesmo tamaho na borda da (.caixa .card .face2)*/
+    width: 400px; /* Define a largura da imagem */
+    height: 400px; /* Define a altura da imagem */
 }
 
 .caixa .card .face2 {
@@ -87,20 +88,19 @@ h1, h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #8d8b8ba9;
+    background: #8d8b8b8a;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Alinha o conteúdo ao fundo */
     align-items: center;
-    padding: 20px;
+    padding: 2px;
     box-sizing: border-box;
-    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.8);
     transform: translateY(-0%); /* esconde o face2 atras do face1 */
     transition: 0.5s;
 }
 
 .caixa .card:hover .face2 {
-    transform: translateY(60px); /* Quando passa o mouse, desce */
+    transform: translateY(60px); /* Quando passa o mouse, desce o face2 */
 }
 
 .caixa .card .face2 .content {
@@ -109,20 +109,20 @@ h1, h2 {
 }
 
 .caixa .card .face2 button {
-    padding: 10px 20px;
+    margin: 10px;
+    padding: 10px;
     background-color: #ff0057;
     color: white;
-    text-wrap: wrap;
-    border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .caixa .card .face2 button:hover {
-    border-bottom: 5px solid #333;
-    background-color: #e6004b; /* Cor mais escura ao passar o mouse */
+    background-color: #ff0057; /* Cor mais escura ao passar o mouse */
+    color: #000000;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.8);
 }
 
 /*rodapé*/

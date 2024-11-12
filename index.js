@@ -15,12 +15,16 @@ function desviar(btn) {
 }  
 
 // Função para enviar mensagem no WhatsApp  
-function sendToWhatsApp(botaoIndex) {  
-  console.log("Índice do botão:", botaoIndex);  
-  console.log("Mensagem:", buttonMessages[botaoIndex]);  
-  const recipientNumber = "";  
-  const message = encodeURIComponent(`Olá, ${buttonMessages[botaoIndex]}, que horas você vem me pegar?`);  
-  const whatsappUrl = `https://wa.me/${recipientNumber}?text=${message}`;  
-  window.open(whatsappUrl, '_blank');  
-}
+function sendToWhatsApp(button) {
+    const recipientNumber = ""; // Insira o número de telefone com código de país e DDD
 
+    // Captura o texto do botão como parte da mensagem
+    const messageText = button.textContent.trim();
+    const message = encodeURIComponent(`Olá, gostaria de ${messageText}. Que horas você vem me pegar?`);
+    
+    // URL para enviar a mensagem pelo WhatsApp
+    const whatsappUrl = `https://wa.me/${recipientNumber}?text=${message}`;
+    
+    // Abre o WhatsApp com a mensagem no navegador ou aplicativo
+    window.open(whatsappUrl, '_blank');
+}

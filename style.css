@@ -46,7 +46,7 @@ h1, h2 {
     border-radius: 5px;  
     padding: 10px;  
     margin: 2px;  
-    display: flex;  
+    display: flex;
     justify-content: center;  
     flex-wrap: wrap;  
     align-items: center;  
@@ -101,13 +101,6 @@ h1, h2 {
     flex-wrap: wrap;
 }
 
-.caixa{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
 /*rodapé*/
 footer {  
     font-family: Verdana, Geneva, Tahoma, sans-serif;  
@@ -117,14 +110,37 @@ footer {
     text-align: center;  
 }  
 
-footer > .p {  
-    padding: 10px;  
-    margin: 5px;  
-}
-
 .box-verso:hover{
     width: 100%;
     transition-delay: 0.5s;
     height: 100%;
     transform: rotate3d(180deg);
+}
+
+.box1{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+}
+.box-frente, .box-verso{
+    height: 20rem;
+    border-radius: 20px;
+    transition: all 0.9s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 80%;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-verso{
+    transform: rotateY(-180deg);
+}
+.box:hover .box-frente{
+    transform: rotateY(180deg);
+}
+.box:hover .box-verso{
+    transform: rotateY(0deg);
 }

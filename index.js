@@ -20,7 +20,7 @@ function sendToWhatsApp(button) {
 
     // Captura o texto do botão como parte da mensagem
     const messageText = button.textContent.trim();
-    const message = encodeURIComponent(`Olá, gostaria de ${messageText}. Que horas você vem me pegar?`);
+    const message = encodeURIComponent(`Olá, eu aceito ${messageText}. Que horas você vem me pegar?`);
     
     // URL para enviar a mensagem pelo WhatsApp
     const whatsappUrl = `https://wa.me/${recipientNumber}?text=${message}`;

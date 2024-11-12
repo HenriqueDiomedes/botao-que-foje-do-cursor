@@ -93,58 +93,15 @@ h1, h2 {
     z-index: 10;  
 }  
 
-/*botões de opção*/
-.bnt {  
-    gap: 3px;
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-    flex-wrap: wrap;
-}
-
 /*rodapé*/
 footer {  
     font-family: Verdana, Geneva, Tahoma, sans-serif;  
-    background-color: black;  
+    background-color: #333; 
+    width: 100%; 
     color: white;  
-    margin: 5px;  
+    margin: 2%;  
     text-align: center;  
 }  
-
-.box-verso:hover{
-    width: 100%;
-    transition-delay: 0.5s;
-    height: 100%;
-    transform: rotate3d(180deg);
-}
-
-.box1{
-    position: relative;
-    width: 400px;
-    height: 400px;
-    cursor: pointer;
-}
-.box-frente, .box-verso{
-    height: 20rem;
-    border-radius: 20px;
-    transition: all 0.9s ease;
-    backface-visibility: hidden;
-    position: absolute;
-    width: 80%;
-    padding: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.box-verso{
-    transform: rotateY(-180deg);
-}
-.box:hover .box-frente{
-    transform: rotateY(180deg);
-}
-.box:hover .box-verso{
-    transform: rotateY(0deg);
-}
 
 /* style do primeiro card*/
 .caixa .card {
@@ -153,24 +110,24 @@ footer {
     perspective: 0px; /*faz com que o face2 fique atras do face1*/
 }
 
-.caixa .card .face.face1 {
+.caixa .card .face1 {
     position: relative;
     z-index: 10;
     transition: 0.9s;
 }
 
-.caixa .card:hover .face.face1 {
+.caixa .card:hover .face1 {
     background: #ff005580;
     transform: translateY(-5px);
 }
 
-.caixa .card .face.face1 .icon img {
+.caixa .card .face1 .icon img {
     border-radius: 5px;
     width: 400px; /* Define a largura desejada para a imagem */
     height: 400px; /* Define a altura desejada para a imagem */
 }
 
-.caixa .card .face.face2 {
+.caixa .card .face2 {
     border-radius: 5px;
     position: absolute;
     top: 0;
@@ -189,16 +146,16 @@ footer {
     transition: 0.5s;
 }
 
-.caixa .card:hover .face.face2 {
+.caixa .card:hover .face2 {
     transform: translateY(70px); /* Quando passa o mouse, desce */
 }
 
-.caixa .card .face.face2 .content {
+.caixa .card .face2 .content {
     width: 100%;
     text-align: center; /* Opcional: centraliza o conteúdo horizontalmente */
 }
 
-.caixa .card .face.face2 button {
+.caixa .card .face2 button {
     padding: 10px 20px;
     background-color: #ff0057;
     color: white;
@@ -210,7 +167,7 @@ footer {
     transition: background-color 0.3s;
 }
 
-.caixa .card .face.face2 button:hover .p {
+.caixa .card .face2 button:hover {
     border-bottom: 5px solid #333;
     background-color: #e6004b; /* Cor mais escura ao passar o mouse */
 }

@@ -17,48 +17,24 @@ function desviar(btn) {
 // Variável para rastrear qual imagem está em zoom  
 let currentZoomed = null;  
 
-// Variável para rastrear qual imagem está em rotação  
-let currentRotating = null;  
-
 // Função para zoomar imagem  
 function zoomImage(event, box) {  
   event.stopPropagation();  
   if (currentZoomed === box) {  
-      box.classList.remove('zoom');  
-      currentZoomed = null;  
+    box.classList.remove('zoom');  
+    currentZoomed = null;  
   } else {  
-      if (currentZoomed) {  
-          currentZoomed.classList.remove('zoom');  
-          currentZoomed.classList.remove('rotate');  
-          currentRotating = null;  
-      }  
-      box.classList.add('zoom');  
-      currentZoomed = box;  
-      setTimeout(() => {  
-          if (currentZoomed === box) {  
-              rotateImage(box);  
-          }  
-      }, 500);  
-  }  
-}  
-
-// Função para rotacionar imagem  
-function rotateImage(box) {  
-  box.classList.add('rotate');  
-  currentRotating = box;  
-}  
-
-// Função para remover o zoom e rotação ao clicar fora  
-document.addEventListener('click', () => {  
-  if (currentZoomed) {  
+    if (currentZoomed) {  
       currentZoomed.classList.remove('zoom');  
-      currentZoomed.classList.remove('rotate');  
-      currentZoomed = null;  
-      currentRotating = null;  
+    }  
+    box.classList.add('zoom');  
+    currentZoomed = box;  
   }  
-});  
+}
 
- 
+function flipImage(element) {  
+  element.classList.toggle('box-flip');  
+}
 
 // Array de mensagens para os botões  
 const buttonMessages = [  

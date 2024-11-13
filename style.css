@@ -10,7 +10,6 @@
     src: url(font/KINKEE__.TTF);
 }
 
-
 /*style do index1*/
 body {  
     background-image: url(img/fundo.jpg);
@@ -110,12 +109,12 @@ h2 {
 }
 
 .caixa .card:hover .face1 {
-    background: #ff0055b9;
+    background: #ff0055b9; /*linha que aparece em cima do botão do face2*/
     transform: translateY(-3px);
 }
 
 .caixa .card .face1 .icon img {
-    border-radius: 10px;/*tamanho das bosdas "tem que colocar o mesmo tamaho na borda da (.caixa .card .face2)*/
+    border-radius: 10px;/*tamanho das bordas "tem que colocar o mesmo tamaho na borda da (.caixa .card .face2)*/
     width: 400px; /* Define a largura da imagem */
     height: 400px; /* Define a altura da imagem */
 }
@@ -144,7 +143,7 @@ h2 {
 
 .caixa .card .face2 .content {
     width: 100%;
-    text-align: center; /* Opcional: centraliza o conteúdo horizontalmente */
+    text-align: center;
 }
 
 .caixa .card .face2 button {

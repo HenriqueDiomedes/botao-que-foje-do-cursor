@@ -26,5 +26,5 @@ function sendToWhatsApp(button) {
     const whatsappUrl = `https://wa.me/${recipientNumber}?text=${message}`;
     
     // Abre o WhatsApp com a mensagem no navegador ou aplicativo
-    window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl,'_blank');
 }
